@@ -6,8 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        format = "pretty",
+        plugin = "pretty",
         glue = "se/david/rest",
-        features = {"classpath:features/rest-interface.feature"})
+        features = {
+                "classpath:features/rest-interface.feature"
+        }
+)
 public class CucumberRunnerTest {
 }

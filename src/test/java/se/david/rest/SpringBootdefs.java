@@ -1,6 +1,5 @@
 package se.david.rest;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,17 +10,10 @@ import io.restassured.http.Method;
 import io.restassured.response.ValidatableResponse;
 import org.hamcrest.CoreMatchers;
 import org.springframework.boot.context.embedded.LocalServerPort;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.test.context.ContextConfiguration;
 
 import static io.restassured.RestAssured.given;
 
-@SpringBootTest(
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        classes = Application.class
-)
-@ContextConfiguration
+@SpringTestConf
 public class SpringBootdefs {
     @LocalServerPort
     private int port;
