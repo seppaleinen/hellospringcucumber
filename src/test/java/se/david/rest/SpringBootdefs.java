@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.given;
 public class SpringBootdefs {
     @LocalServerPort
     private int port;
-    private Method method ;
+    private Method method;
     private ValidatableResponse response;
 
     @Before
